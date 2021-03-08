@@ -3,23 +3,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-Graph* allocGraph(const int type, const short weighted, const int vNum) {
+Graph* allocGraph(const int type, const short weighted) {
     Graph *G = calloc(1, sizeof(Graph));
     if(type == 0)
-        allocGraphL(weighted, vNum);
+        G->graphL = allocGraphL(weighted);
     G->type = type;
     G->weighted = weighted;
 
     return G;
 }
-void insertVertice(Graph *G, const int num, const int weight) {
+void insertVertice(Graph *G, const int num) {
     G->type == 0
-        ? insertVerticeL(G->graphL, num, weight)
+        ? insertVerticeL(G->graphL, num)
         : NULL;
 }
-void insertAdjacency(Graph *G, const int in, const int out) {
+void insertAdjacency(Graph *G, const int in, const int out, const int weight) {
     G->type == 0
-        ? insertAdjacencyL(G->graphL, in, out)
+        ? insertAdjacencyL(G->graphL, in, out, weight)
         : NULL;
 }
 void removeVertice(Graph *G, const int num) {

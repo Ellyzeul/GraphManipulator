@@ -1,0 +1,27 @@
+# accessGraph
+cd obj
+gcc -c ..\..\src\utils.c ..\..\src\GraphL.c ..\..\src\Graph.c ..\test.c ..\test_accessGraph.c
+cd ..
+gcc obj\test_accessGraph.o obj\utils.o obj\GraphL.o obj\Graph.o obj\test.o -o app.exe
+.\app
+
+# insertVertice
+cd obj
+gcc -c ..\..\src\utils.c ..\..\src\GraphL.c ..\..\src\Graph.c ..\test.c ..\test_insertVertice.c
+cd ..
+gcc obj\test_insertVertice.o obj\utils.o obj\GraphL.o obj\Graph.o obj\test.o -o app.exe
+.\app
+
+# removeVertice
+cd obj
+gcc -c ..\..\src\utils.c ..\..\src\GraphL.c ..\..\src\Graph.c ..\test.c ..\test_removeVertice.c
+cd ..
+gcc obj\test_removeVertice.o obj\utils.o obj\GraphL.o obj\Graph.o obj\test.o -o app.exe
+.\app
+
+# insertAdjacency
+cd obj
+gcc -c ..\..\src\utils.c ..\..\src\GraphL.c ..\..\src\Graph.c ..\test.c ..\test_insertAdjacency.c
+cd ..
+gcc obj\test_insertAdjacency.o obj\utils.o obj\GraphL.o obj\Graph.o obj\test.o -o app.exe
+.\app
